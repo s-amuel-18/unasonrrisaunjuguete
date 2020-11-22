@@ -1,0 +1,17 @@
+mixin navbar(links)
+  .bg-light.py-3.fixed-top
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container
+        a.navbar-brand(href="#") Navbar
+        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+
+        div.collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.ml-auto
+            each link in links
+              li.nav-item.py-2
+                a.nav-link(href=link[0])= link[1]
+            li.nav-item.py-2
+              button.btn.btn-danger.br-20.mr-2 registrate
+            li.nav-item.py-2
+              button.btn.btn-outline-danger.br-20.mr-2 iniciar sesion 

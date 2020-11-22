@@ -4,6 +4,7 @@ include ../includes/components/aboutUs.pug
 include ../includes/components/headerVideo.pug
 include ../includes/components/form.pug
 include ../includes/components/footer.pug
+include ../includes/components/navbar.pug
 block metatags
   -var title = 'Feliz Desarrollo Web basado en Componentes'
   -var description = 'Boilerplate para el desarrollo de proyectos Frontend basado en Componentes de @jonmircha'
@@ -12,6 +13,7 @@ block metatags
   meta(name="application-name", content=title)
 block content
   header
+    +navbar([[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]])
     +headerVideo(`https://irrinews.com/wp-content/uploads/2016/11/Lorem-Ipsum-video.mp4?_=5`,`https://picsum.photos/200/300`)
   main.App
     +aboutUs(`https://picsum.photos/200/300`)
