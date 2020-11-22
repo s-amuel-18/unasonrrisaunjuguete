@@ -1,7 +1,32 @@
 mixin formBoy()
-  .formBoy.b-red
+  .formBoy.b-red.text-center.py-5
+    h2 regalo de santa
     .container
       .row
-        .col-lg-6.col-md-12.p-5.b-red
-        .col-lg-6.col-md-12.p-5.b-red
+        //- .col-lg-6.col-md-12.px-3.py-5.b-red
+        //-   .formBoy-contentForm.b-red.p-4.text-center.m-auto
+        //-     img(src="", alt="").formBoy-img.b-red.m-auto
+        //-     h3.mb-4 Lorem, ipsum dolor.
+        //-     form.formBoy-form
+        //-       .form-group
+        //-         input( type="text", class="form-control", placeholder="nombre").br-25
+        //-       .form-group
+        //-         input( type="text", class="form-control", placeholder="apellido").br-25
+        //-       .form-group
+        //-         textarea(class="form-control", , rows="5",placeholder="ingreza tu carta navideña").br-25
+        //-       button(type="submit").btn.btn-primary.btn-block.br-25 Registrar
+        .col-12.px-3.py-5.b-red 
+          .formBoy-contentForm.b-red.p-4.text-center.m-auto
+            img(src="", alt="").formBoy-img.b-red.m-auto
+            h3.mb-4 Lorem, ipsum dolor.
+            form.formBoy-form#formPadrino
+              .form-group
+                input( type="text", name="nombre" class="form-control", placeholder="nombre y apellido", required)#padrinoName.br-25
+              .form-group
+                input( type="email", name="email" class="form-control", placeholder="correo Electronico", required)#padrinoEmail.br-25
+              .form-group
+                input( type="password", class="form-control", placeholder="ingreza una contraseña", required)#padrinoPass.br-25
+
+              button(type="submit").btn.btn-primary.btn-block.br-25 Registrar
+              button(type="submit").btn.btn-primary.btn-block.br-25#googleAuth google
 

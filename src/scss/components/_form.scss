@@ -1,0 +1,19 @@
+.formBoy {
+
+
+  &-contentForm {
+    min-height: 500px;
+    max-width: 450px;
+    
+  }
+
+  &-img {
+    width: fit-content;
+    height: 100px;
+    display: block;
+  }
+}
+
+.br-25 {
+  border-radius: 25px;
+}

@@ -10147,6 +10147,18 @@ body {
   .headerVideo-video {
     background-color: #fff; }
 
+.formBoy-contentForm {
+  min-height: 500px;
+  max-width: 450px; }
+
+.formBoy-img {
+  width: fit-content;
+  height: 100px;
+  display: block; }
+
+.br-25 {
+  border-radius: 25px; }
+
 .footer-content {
   max-width: 450px; }
   @media (max-width: 768px) {
