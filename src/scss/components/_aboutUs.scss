@@ -1,0 +1,17 @@
+.aboutUs {
+  background-color: $azuld-claro;
+  &-contentCol {
+    max-width: 550px;
+    // background-color: #000; 
+  }
+
+  &-contentImg {
+    min-height: 200px;
+  }
+
+  &-img {
+    width: 90%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+}

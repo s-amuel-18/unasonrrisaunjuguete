@@ -1,0 +1,33 @@
+.footer {
+  &-content {
+    max-width: 450px;
+    @media (max-width: 768px) { 
+      margin: auto; 
+    }
+  }
+
+  &-listMedia {
+    width: 140px;
+    height: 140px;
+  }
+
+  &-itemMedia {
+    display: flex;
+    padding: 5px;
+  }
+  
+  &-buttonMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 100%;
+    // height: 100%;
+    flex-grow: 1;
+    border-radius: 50%;
+
+    img {
+      height: 50%;
+    }
+  }
+}
+

@@ -1,0 +1,41 @@
+include ./metatags_webapp.pug
+doctype html
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    +metatagsWebApp()
+    block metatags
+    link(rel="stylesheet", href="./style.css")
+    //- link(rel="stylesheet", href="owl.carousel.min.css")
+    //- link(rel="stylesheet", href="owl.theme.default.min.css")
+
+    script(src="jquery.min.js")
+    script(src="owl.carousel.min.js")
+    
+  body
+    block content
+ 
+    script.
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        margin: 10,
+        loop: true,
+        nav:true,
+        //- autoplay:true,
+        //- stagePadding:30,
+        dots:false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      })
+    script(src="./script.js")
