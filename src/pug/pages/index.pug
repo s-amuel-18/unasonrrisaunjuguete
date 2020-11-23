@@ -5,6 +5,7 @@ include ../includes/components/headerVideo.pug
 include ../includes/components/form.pug
 include ../includes/components/footer.pug
 include ../includes/components/navbar.pug
+include ../includes/components/contact.pug
 block metatags
   -var title = 'Feliz Desarrollo Web basado en Componentes'
   -var description = 'Boilerplate para el desarrollo de proyectos Frontend basado en Componentes de @jonmircha'
@@ -12,11 +13,30 @@ block metatags
   meta(name="description", content=description)
   meta(name="application-name", content=title)
 block content
-  header
-    +navbar([[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]])
+  header#inicio
+    +navbar([[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]], `./img/Logo NAV.png`)
     +headerVideo(`https://irrinews.com/wp-content/uploads/2016/11/Lorem-Ipsum-video.mp4?_=5`,`https://picsum.photos/200/300`)
   main.App
-    +aboutUs(`https://picsum.photos/200/300`)
+    +aboutUs(`./img/Nosotros-IMG.png`)
+    +contact(`./img/Contacto.png`,`#`)
     +carrouselBoys([1,2,3,5])
-    +formBoy()
-  +footer(`https://picsum.photos/200/300`, [[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]], [[`link`,`icon`],[`link`,`icon`],[`link`,`icon`],[`link`,`icon`]])
+    +formBoy(`./img/Background -REGALO DE SANTA.png`,`./img/Cara de santa FORMULARIO - Y SELECCION de 2020.png`)
+  +footer(`./img/LOGO FOOTER.png`, [[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]], [[`link`,`./img/RRSS INSTAGRAM.svg`],[`link`,`./img/RRSS TWITTER.svg`],[`link`,`./img/RRSS FACE.svg`],[`link`,`./img/whatsapp.svg`]],`./img/NIÑA png.png`)  
+
+  .modal.fade#exampleModal(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5.modal-title#exampleModalLabel Iniciar Sesion
+          button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        form#logIn
+          .modal-body
+            .form-group 
+              input( type="email", name="email" class="form-control", placeholder="correo Electronico", required)#inicioSesion-email.br-25
+            .form-group
+              input( type="password", name="password", class="form-control", placeholder="ingreza una contraseña", required)#inicioSesion-pass.br-25
+          .modal-footer
+            button(type="button", data-dismiss="modal").btn.btn-outline-danger.br-25 cancelar
+            button(type="submit" ).btn.btn-buttonForm.br-25 Iniciar Sesion 
+  

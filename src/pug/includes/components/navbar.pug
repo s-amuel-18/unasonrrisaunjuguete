@@ -1,17 +1,18 @@
-mixin navbar(links)
-  .bg-light.py-3.fixed-top
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+mixin navbar(links, logo)
+  .menuNavegation.bg-white.fixed-top.shadow-sm
+    nav.navbar.navbar-expand-lg.navbar-light.bg-white.font-f-title
       .container
-        a.navbar-brand(href="#") Navbar
+        a.navbar-brand(href=links[0][0]) 
+          img(data-img=logo, alt="").menuNavegation-logo.preloaderImage-img
         button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
           span.navbar-toggler-icon
 
         div.collapse.navbar-collapse#navbarSupportedContent
           ul.navbar-nav.ml-auto
             each link in links
-              li.nav-item.py-2
+              li.nav-item.p-2
                 a.nav-link(href=link[0])= link[1]
-            li.nav-item.py-2
-              button.btn.btn-danger.br-20.mr-2 registrate
-            li.nav-item.py-2
-              button.btn.btn-outline-danger.br-20.mr-2 iniciar sesion 
+            li.nav-item.p-2
+              a(href="#registro").btn-sesion.btn.btn-danger.br-20 registrate
+            li.nav-item.p-2
+              button.btn-sesion.btn.btn-outline-danger.br-20(data-toggle="modal", data-target="#exampleModal") iniciar sesion 

@@ -25,23 +25,21 @@
     <script src="owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <header>
-      <div class="bg-light py-3 fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container"><a class="navbar-brand" href="#">Navbar</a>
+  <body class="loading">
+    <header id="inicio">
+      <div class="menuNavegation bg-white fixed-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white font-f-title">
+          <div class="container"><a class="navbar-brand" href="#inicio"> <img class="menuNavegation-logo preloaderImage-img" data-img="./img/Logo NAV.png" alt=""/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item py-2"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item py-2"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-                <li class="nav-item py-2"><a class="nav-link" href="#contacto">Contactanos</a></li>
-                <li class="nav-item py-2"><a class="nav-link" href="#perfiles">Perfiles</a></li>
-                <li class="nav-item py-2">
-                  <button class="btn btn-danger br-20 mr-2">registrate</button>
-                </li>
-                <li class="nav-item py-2">
-                  <button class="btn btn-outline-danger br-20 mr-2">iniciar sesion </button>
+                <li class="nav-item p-2"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item p-2"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                <li class="nav-item p-2"><a class="nav-link" href="#contacto">Contactanos</a></li>
+                <li class="nav-item p-2"><a class="nav-link" href="#perfiles">Perfiles</a></li>
+                <li class="nav-item p-2"><a class="btn-sesion btn btn-danger br-20" href="#registro">registrate</a></li>
+                <li class="nav-item p-2">
+                  <button class="btn-sesion btn btn-outline-danger br-20" data-toggle="modal" data-target="#exampleModal">iniciar sesion </button>
                 </li>
               </ul>
             </div>
@@ -49,27 +47,37 @@
         </nav>
       </div>
       <div class="headerVideo d-flex justify-content-center">
-        <video class="headerVideo-video w-100" src="https://irrinews.com/wp-content/uploads/2016/11/Lorem-Ipsum-video.mp4?_=5" poster="https://picsum.photos/200/300" autoplay="autoplay" muted="muted"></video>
+        <video class="headerVideo-video w-100 preloaderImage-img" data-img="https://irrinews.com/wp-content/uploads/2016/11/Lorem-Ipsum-video.mp4?_=5" poster="https://picsum.photos/200/300" autoplay="autoplay" muted="muted"></video>
       </div>
     </header>
     <main class="App">
-      <div class="aboutUs py-4">
+      <div class="aboutUs py-5" id="nosotros">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-12 p-4 m-auto aboutUs-contentCol">
-              <h2>nosotros</h2>
+              <h2 class="a-title-size a-title">nosotros</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, totam ab assumenda dolor consectetur, obcaecati, perferendis id natus ea architecto est quo alias officia! Vero temporibus molestias repellat, error incidunt repellendus voluptas illum illo quia rerum suscipit sint aliquid totam rem nulla harum tempora. Minus nam quo et molestias repellat sunt, aperiam asperiores cumque mollitia eaque, vitae laudantium perferendis inventore cupiditate molestiae doloribus corrupti excepturi? Modi adipisci obcaecati optio sunt nam, velit labore? Eos et accusamus adipisci quasi, rerum repudiandae nisi aspernatur delectus aperiam quia laudantium quae soluta vel! Perferendis sit magni maxime asperiores, quod voluptatibus iusto ea! Cum, ducimus?</p>
             </div>
-            <div class="col-lg-6 col-md-12 p-4 m-auto aboutUs-contentCol aboutUs-contentImg d-flex justify-content-center"><img class="aboutUs-img" src="https://picsum.photos/200/300" alt=""/></div>
+            <div class="col-lg-6 col-md-12 p-4 m-auto aboutUs-contentCol aboutUs-contentImg d-flex justify-content-center content-preloaderImage"><img class="aboutUs-img preloaderImage-img" data-img="./img/Nosotros-IMG.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="contactWhatsApp"><img class="preloaderImage-img w-100 contactWhatsApp-img" data-img="./img/Contacto.png" alt=""/>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-6 p-5 text-center">
+              <h2 class="text-white">contactanos</h2>
+            </div>
+            <div class="col-md-12 col-lg-6 p-5 text-center"><a class="btn btn-naranja br-25 px-3" href="#"><img data-img="./img/whatsapp.svg" class="preloaderImage-img mr-1"> contactanos por whatsapp</a></div>
           </div>
         </div>
       </div>
       <div class="carrouselBoys container-fluid text-center py-5">
-        <h2>perfiles</h2>
+        <h2 class="a-title-size a-title">perfiles</h2>
         <div class="owl-carousel carrouselBoys-counterCards container">
           <div class="item carrouselBoys-item">
             <div class="carrouselBoys-card card mx-auto position-relative">
-              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100" src="https://picsum.photos/200/300" alt=""/></div>
+              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100 preloaderImage-img" data-img="https://picsum.photos/200/300" alt=""/></div>
               <div class="card-body text-center py-5 mt-4">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus adipisci aspernatur explicabo veritatis. Voluptate repudiandae nobis ullam expedita perspiciatis excepturi</p><a class="card-link text-light carrouselBoys-buttonLink position-absolute p-2" href="#">Another link</a>
@@ -78,7 +86,7 @@
           </div>
           <div class="item carrouselBoys-item">
             <div class="carrouselBoys-card card mx-auto position-relative">
-              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100" src="https://picsum.photos/200/300" alt=""/></div>
+              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100 preloaderImage-img" data-img="https://picsum.photos/200/300" alt=""/></div>
               <div class="card-body text-center py-5 mt-4">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus adipisci aspernatur explicabo veritatis. Voluptate repudiandae nobis ullam expedita perspiciatis excepturi</p><a class="card-link text-light carrouselBoys-buttonLink position-absolute p-2" href="#">Another link</a>
@@ -87,7 +95,7 @@
           </div>
           <div class="item carrouselBoys-item">
             <div class="carrouselBoys-card card mx-auto position-relative">
-              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100" src="https://picsum.photos/200/300" alt=""/></div>
+              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100 preloaderImage-img" data-img="https://picsum.photos/200/300" alt=""/></div>
               <div class="card-body text-center py-5 mt-4">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus adipisci aspernatur explicabo veritatis. Voluptate repudiandae nobis ullam expedita perspiciatis excepturi</p><a class="card-link text-light carrouselBoys-buttonLink position-absolute p-2" href="#">Another link</a>
@@ -96,7 +104,7 @@
           </div>
           <div class="item carrouselBoys-item">
             <div class="carrouselBoys-card card mx-auto position-relative">
-              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100" src="https://picsum.photos/200/300" alt=""/></div>
+              <div class="carrouselBoys-contentImgBoy mx-auto"><img class="carrouselBoys-imgBoy w-100 h-100 preloaderImage-img" data-img="https://picsum.photos/200/300" alt=""/></div>
               <div class="card-body text-center py-5 mt-4">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus adipisci aspernatur explicabo veritatis. Voluptate repudiandae nobis ullam expedita perspiciatis excepturi</p><a class="card-link text-light carrouselBoys-buttonLink position-absolute p-2" href="#">Another link</a>
@@ -105,25 +113,26 @@
           </div>
         </div>
       </div>
-      <div class="formBoy b-red text-center py-5">
-        <h2>regalo de santa</h2>
+      <div class="formBoy text-center py-5" id="registro"><img class="formBoy-nackgroundImg preloaderImage-img" data-img="./img/Background -REGALO DE SANTA.png" alt=""/>
         <div class="container">
           <div class="row">
-            <div class="col-12 px-3 py-5 b-red"> 
-              <div class="formBoy-contentForm b-red p-4 text-center m-auto"><img class="formBoy-img b-red m-auto" src="" alt=""/>
-                <h3 class="mb-4">Lorem, ipsum dolor.</h3>
+            <div class="col-12 px-3 py-4">
+              <h2 class="a-title a-title-size text-white mb-5">regalo de santa</h2>
+              <div class="formBoy-contentForm br-25 p-4 text-center m-auto"><img class="formBoy-img m-auto preloaderImage-img" data-img="./img/Cara de santa FORMULARIO - Y SELECCION de 2020.png" alt=""/>
+                <h3 class="h2 mb-4 text-verde">Registrarse</h3>
                 <form class="formBoy-form" id="formPadrino">
                   <div class="form-group">
                     <input class="form-control br-25" type="text" name="nombre" placeholder="nombre y apellido" required="required" id="padrinoName"/>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group"> 
                     <input class="form-control br-25" type="email" name="email" placeholder="correo Electronico" required="required" id="padrinoEmail"/>
                   </div>
                   <div class="form-group">
                     <input class="form-control br-25" type="password" placeholder="ingreza una contraseña" required="required" id="padrinoPass"/>
                   </div>
-                  <button class="btn btn-primary btn-block br-25" type="submit">Registrar</button>
-                  <button class="btn btn-primary btn-block br-25" type="submit" id="googleAuth">google</button>
+                  <button class="btn btn-buttonForm btn-block br-25" type="submit">Registrar</button>
+                  <p class="my-3">con:</p>
+                  <button class="btn btn-outline-primary btn-block br-25" type="button" id="googleAuth"><img class="h-15px mr-2 preloaderImage-img" data-img="./img/google-icon.svg" alt=""> google</button>
                 </form>
               </div>
             </div>
@@ -131,38 +140,62 @@
         </div>
       </div>
     </main>
-    <footer class="footer py-5 b-red">
+    <footer class="footer py-5 text-white"><img class="footer-niniaImg" src="./img/NIÑA png.png" alt=""/>
       <div class="container py-3">
         <div class="row">
-          <div class="footer-content col-lg-3 col-md-6 col-sm-12 b-red p-3"><img class="w-100" src="https://picsum.photos/200/300" alt=""/></div>
-          <div class="footer-content col-lg-3 col-md-6 col-sm-12 b-red p-3">
-            <h4>Direccion</h4>
-            <p class="pl-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae officiis doloribus minus nam corporis numquam?</p>
+          <div class="footer-content col-lg-3 col-md-6 col-sm-12 p-3"><img class="w-75 preloaderImage-img m-auto d-block" data-img="./img/LOGO FOOTER.png" alt=""/></div>
+          <div class="footer-content col-lg-3 col-md-6 col-sm-12 p-3">
+            <h4 class="h2">Direccion</h4>
+            <p class="p-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae officiis doloribus minus nam corporis numquam?</p>
           </div>
-          <div class="footer-content col-lg-3 col-md-6 col-sm-12 b-red p-3">
-            <h4>Menu</h4>
+          <div class="footer-content col-lg-3 col-md-6 col-sm-12 p-3">
+            <h4 class="h2">Menu</h4>
             <nav>
-              <ul class="pl-2">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contacto">Contactanos</a></li>
-                <li><a href="#perfiles">Perfiles</a></li>
+              <ul class="p-0">
+                <li><a class="font-f-title text-white" href="#inicio">Inicio</a></li>
+                <li><a class="font-f-title text-white" href="#nosotros">Nosotros</a></li>
+                <li><a class="font-f-title text-white" href="#contacto">Contactanos</a></li>
+                <li><a class="font-f-title text-white" href="#perfiles">Perfiles</a></li>
               </ul>
             </nav>
           </div>
-          <div class="footer-content col-lg-3 col-md-6 col-sm-12 b-red p-3">
-            <h4>Social Media
-              <ul class="row b-red footer-listMedia ml-2 mt-2">
-                <li class="footer-itemMedia col-6"><a class="footer-buttonMedia b-red" href="link"><img class="b-red" src="icon" alt=""/></a></li>
-                <li class="footer-itemMedia col-6"><a class="footer-buttonMedia b-red" href="link"><img class="b-red" src="icon" alt=""/></a></li>
-                <li class="footer-itemMedia col-6"><a class="footer-buttonMedia b-red" href="link"><img class="b-red" src="icon" alt=""/></a></li>
-                <li class="footer-itemMedia col-6"><a class="footer-buttonMedia b-red" href="link"><img class="b-red" src="icon" alt=""/></a></li>
+          <div class="footer-content col-lg-3 col-md-6 col-sm-12 p-3">
+            <h4 class="h2">Social Media
+              <ul class="row footer-listMedia m-0">
+                <li class="footer-itemMedia col-6 p-0"><a class="footer-buttonMedia" href="link"><img class="preloaderImage-img" data-img="./img/RRSS INSTAGRAM.svg" alt=""/></a></li>
+                <li class="footer-itemMedia col-6 p-0"><a class="footer-buttonMedia" href="link"><img class="preloaderImage-img" data-img="./img/RRSS TWITTER.svg" alt=""/></a></li>
+                <li class="footer-itemMedia col-6 p-0"><a class="footer-buttonMedia" href="link"><img class="preloaderImage-img" data-img="./img/RRSS FACE.svg" alt=""/></a></li>
+                <li class="footer-itemMedia col-6 p-0"><a class="footer-buttonMedia" href="link"><img class="preloaderImage-img" data-img="./img/whatsapp.svg" alt=""/></a></li>
               </ul>
             </h4>
           </div>
         </div>
       </div>
     </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesion</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <form id="logIn">
+            <div class="modal-body">
+              <div class="form-group"> 
+                <input class="form-control br-25" type="email" name="email" placeholder="correo Electronico" required id="inicioSesion-email">
+              </div>
+              <div class="form-group">
+                <input class="form-control br-25" type="password" name="password" placeholder="ingreza una contraseña" required id="inicioSesion-pass">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-outline-danger br-25" type="button" data-dismiss="modal">cancelar</button>
+              <button class="btn btn-buttonForm br-25" type="submit">Iniciar Sesion </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script>
       var owl = $('.owl-carousel');
       owl.owlCarousel({

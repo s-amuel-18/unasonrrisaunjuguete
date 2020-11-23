@@ -15,7 +15,14 @@
 *   @author Jonathan MirCha <jonmircha@gmail.com>
 *   @version 1.0.0
 */
-$font: sans-serif;
+@font-face {
+  font-family: "title-sunshine";
+  src: url("./typo/A little sunshine.ttf");
+  font-style: normal; 
+}
+
+
+$font: "Roboto";
 $font-size: 16px;
 
 html {
@@ -35,8 +42,37 @@ li {
   list-style-type:  none;
 }
 
-body { overflow-x: hidden; }
+body {
+  overflow-x: hidden;
+  margin-top: 89px;
+}
 
 .b-red {
   border: 2px solid red;
 } 
+
+.a-title {
+  font-family:"title-sunshine" ;
+} 
+.a-title-size {
+  color: rgb(58, 58, 58);
+  font-weight: 600;
+  font-size: 53px;
+}
+
+.text-verde {
+  color: $verde-claro;
+}
+
+.h-15px {
+  height: 15px;
+}
+
+.font-f-title {
+  font-family: "title-sunshine";
+  font-size: 20px;
+}
+
+.btn-sesion {
+  width: 120px;
+}

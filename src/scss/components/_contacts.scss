@@ -1,0 +1,26 @@
+.contactWhatsApp {
+  min-height: 100px;
+  position: relative;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.btn-naranja {
+  background-color: $naranja-contact;
+  color: #fff;
+  &:hover {
+    color: #fff;
+    background-color: darken($color: $naranja-contact, $amount: 5);
+
+  }
+} 

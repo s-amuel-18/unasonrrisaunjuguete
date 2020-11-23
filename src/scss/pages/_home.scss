@@ -1,0 +1,32 @@
+body {
+  transition: opacity .4s;
+}
+
+body.loading {
+  opacity: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sesion-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(233, 233, 233);
+  object-fit: cover;
+}
+
+.headerSesion {
+  &-avatarHeader {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &-contentButtons {
+    max-width: 500px;
+  }
+
+
+}

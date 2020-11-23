@@ -1,26 +1,27 @@
 //- mixin footer(imgLogo, menu, socialmedia)
-mixin footer(imgLogo, menu, socialMedia)
-  footer.footer.py-5.b-red
+mixin footer(imgLogo, menu, socialMedia, niñaImg)
+  footer.footer.py-5.text-white
+    img(src=niñaImg, alt="").footer-niniaImg 
     .container.py-3
       .row
-        .footer-content.col-lg-3.col-md-6.col-sm-12.b-red.p-3
-          img(src=imgLogo, alt="").w-100
-        .footer-content.col-lg-3.col-md-6.col-sm-12.b-red.p-3
-          h4 Direccion
-          p.pl-2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae officiis doloribus minus nam corporis numquam?
-        .footer-content.col-lg-3.col-md-6.col-sm-12.b-red.p-3
-          h4 Menu
+        .footer-content.col-lg-3.col-md-6.col-sm-12.p-3
+          img(data-img=imgLogo, alt="").w-75.preloaderImage-img.m-auto.d-block
+        .footer-content.col-lg-3.col-md-6.col-sm-12.p-3
+          h4.h2 Direccion
+          p.p-0 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae officiis doloribus minus nam corporis numquam?
+        .footer-content.col-lg-3.col-md-6.col-sm-12.p-3
+          h4.h2 Menu
           nav
-            ul.pl-2
+            ul.p-0
               each item in menu
                 li
-                  a(href=item[0])=item[1]
+                  a(href=item[0]).font-f-title.text-white=item[1]
             
               
-        .footer-content.col-lg-3.col-md-6.col-sm-12.b-red.p-3
-          h4 Social Media
-            ul.row.b-red.footer-listMedia.ml-2.mt-2
+        .footer-content.col-lg-3.col-md-6.col-sm-12.p-3
+          h4.h2 Social Media
+            ul.row.footer-listMedia.m-0
               each media in socialMedia
-                li.footer-itemMedia.col-6
-                  a(href=media[0]).footer-buttonMedia.b-red
-                    img(src=media[1], alt="").b-red
+                li.footer-itemMedia.col-6.p-0
+                  a(href=media[0]).footer-buttonMedia
+                    img(data-img=media[1], alt="").preloaderImage-img
