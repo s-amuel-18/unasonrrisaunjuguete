@@ -27,6 +27,54 @@ body.loading {
   &-contentButtons {
     max-width: 500px;
   }
+}
+
+.modalNinio{
+  &-contentImg {
+    max-width: 250px; 
+  }
+
+  &-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &-contentInputs {
+    max-width: 400px;
+  }
+}
+
+.max-h100vh {
+  max-height: 100vh; 
+}
+.max-h65vh {
+  max-height: 65vh; 
+}
+
+.w-fitContent {
+  width: fit-content;
+}
+
+.centrado-ab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
+
+.modalPadrino {
+  &-imgNiño {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    @media screen and (max-width:992px){
+      width: 100px;
+      height: 100px;
+
+    }
+  }
 }
