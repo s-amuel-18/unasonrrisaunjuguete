@@ -4,7 +4,7 @@ mixin navbar(links, logo)
       .container
         a.navbar-brand(href=links[0][0]) 
           img(data-img=logo, alt="").menuNavegation-logo.preloaderImage-img
-        button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+        button.navbar-toggler.border-0.outline-0(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
           span.navbar-toggler-icon
 
         div.collapse.navbar-collapse#navbarSupportedContent

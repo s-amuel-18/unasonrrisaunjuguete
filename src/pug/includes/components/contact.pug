@@ -1,9 +1,10 @@
 mixin contact(imgBack, link)
-  .contactWhatsApp
+  .contactWhatsApp#contacto.py-6
     img(data-img=imgBack, alt="").preloaderImage-img.w-100.contactWhatsApp-img
     .container
       .row
-        .col-md-12.col-lg-6.p-5.text-center
-          h2.text-white contactanos
-        .col-md-12.col-lg-6.p-5.text-center
-          a(href=link).btn.btn-naranja.br-25.px-3 <img data-img="./img/whatsapp.svg" class="preloaderImage-img mr-1"> contactanos por whatsapp
+        .col-md-12.col-lg-6.text-center
+          //- h2.text-white contactanos
+          img(data-img="./img/Contactanos.png", alt="").preloaderImage-img.max-w95
+        .col-md-12.col-lg-6.p-5.text-center.centrado-ab
+          a(href=link).btn.btn-naranja.br-25.px-5 <img data-img="./img/whatsapp.svg" class="preloaderImage-img mr-2"> whatsapp

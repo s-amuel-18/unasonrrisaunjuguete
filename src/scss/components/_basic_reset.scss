@@ -20,6 +20,8 @@
   src: url("./typo/A little sunshine.ttf");
   font-style: normal; 
 }
+* { -webkit-tap-highlight-color: rgba(255, 255, 255, 0) ; } 
+:root{scroll-behavior:smooth}
 
 
 $font: "Roboto";
@@ -63,6 +65,9 @@ body {
 .text-verde {
   color: $verde-claro;
 }
+.text-azul {
+  color: $azul-oscuro;
+}
 
 .h-15px {
   height: 15px;
@@ -75,4 +80,28 @@ body {
 
 .btn-sesion {
   width: 120px;
+}
+
+.bg-verde-muyClaro {
+  background-color: $verde-muyClaro;
+}
+
+.h-90px {
+  max-height: 80px;
+}
+
+.max-w95 {
+  max-width: 95%;
+}
+
+.outline-0 {
+  outline: none;
+  &:focus {
+    outline: none;
+
+  }
+}
+
+.azul-claro {
+  background-color: $azuld-claro;
 }

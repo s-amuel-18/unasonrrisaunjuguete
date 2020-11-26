@@ -1,15 +1,16 @@
 mixin carrouselBoys(cards)
-  .carrouselBoys.container-fluid.text-center.py-5
-    h2.a-title-size.a-title perfiles
+  .carrouselBoys.container-fluid.text-center.py-6#perfiles
+    //- h2.a-title-size.a-title perfiles
+    img(data-img="./img/Perfil.png", alt="").preloaderImage-img.h-90px.mb-3.max-w95
     .owl-carousel.carrouselBoys-counterCards.container
       each card in cards
         .item.carrouselBoys-item
           .carrouselBoys-card.card.mx-auto.position-relative
             .carrouselBoys-contentImgBoy.mx-auto
-              img(data-img="https://picsum.photos/200/300", alt="").carrouselBoys-imgBoy.w-100.h-100.preloaderImage-img
+              img(data-img="https://picsum.photos/200/300", alt="").carrouselBoys-imgBoy.w-100.h-100.preloaderImage-img.gris-claro
             .card-body.text-center.py-5.mt-4
               h5.card-title Card title
               p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab doloribus adipisci aspernatur explicabo veritatis. Voluptate repudiandae nobis ullam expedita perspiciatis excepturi
-              a(href="#" class="card-link").text-light.carrouselBoys-buttonLink.position-absolute.p-2 Another link
+           
 
 

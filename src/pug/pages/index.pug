@@ -7,7 +7,7 @@ include ../includes/components/footer.pug
 include ../includes/components/navbar.pug
 include ../includes/components/contact.pug
 block metatags
-  -var title = 'Feliz Desarrollo Web basado en Componentes'
+  -var title = 'una sonrrisa un juguete'
   -var description = 'Boilerplate para el desarrollo de proyectos Frontend basado en Componentes de @jonmircha'
   title= title
   meta(name="description", content=description)
@@ -21,11 +21,11 @@ block content
     +contact(`./img/Contacto.png`,`#`)
     +carrouselBoys([1,2,3,5])
     +formBoy(`./img/Background -REGALO DE SANTA.png`,`./img/Cara de santa FORMULARIO - Y SELECCION de 2020.png`)
-  +footer(`./img/LOGO FOOTER.png`, [[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]], [[`link`,`./img/RRSS INSTAGRAM.svg`],[`link`,`./img/RRSS TWITTER.svg`],[`link`,`./img/RRSS FACE.svg`],[`link`,`./img/whatsapp.svg`]],`./img/NIÑA png.png`)  
+  +footer(`./img/LOGO FOOTER.png`, [[`#inicio`,`Inicio`],[`#nosotros`,`Nosotros`],[`#contacto`,`Contactanos`],[`#perfiles`,`Perfiles`]], [[`link`,`./img/RRSS INSTAGRAM.svg`],[`link`,`./img/RRSS TWITTER.svg`],[`link`,`./img/RRSS FACE.svg`],[`link`,`./img/WHATSAPP-footer.svg`]],`./img/NIÑA png.png`)  
 
   .modal.fade#exampleModal(tabindex="-1", aria-labelledby="exampleModalLabel", aria-hidden="true")
     .modal-dialog
-      .modal-content
+      .modal-content#modalLogIn
         .modal-header
           h5.modal-title#exampleModalLabel Iniciar Sesion
           button(type="button", class="close", data-dismiss="modal", aria-label="Close")
@@ -37,6 +37,6 @@ block content
             .form-group
               input( type="password", name="password", class="form-control", placeholder="ingreza una contraseña", required)#inicioSesion-pass.br-25
           .modal-footer
-            button(type="button", data-dismiss="modal").btn.btn-outline-danger.br-25 cancelar
+            button(type="button", data-dismiss="modal").btn.btn-outline-secondary.br-25 cancelar
             button(type="submit" ).btn.btn-buttonForm.br-25 Iniciar Sesion 
-  
+          #modalNotificationLogIn

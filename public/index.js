@@ -22,6 +22,17 @@ var progressBar = function progressBar(porcentaje) {
   return "\n  <div class=\"progress\">\n    <div class=\"progress-bar my-3\" role=\"progressbar\" style=\"width: " + porcentaje + "%;\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\">" + porcentaje + "%</div>\n  </div>\n  ";
 };
 
+var templateCardNinios = function templateCardNinios(_ref) {
+  var carta = _ref.carta,
+      id = _ref.id,
+      names = _ref.names,
+      padrino = _ref.padrino,
+      photoURL = _ref.photoURL;
+
+
+  return "\n    <div class=\"col-xl-3 col-lg-6 col-sm-12 p-2 pt-5 mb-3\">\n      <div id=\"" + id + "\" class=\"h-100 carrouselBoys-card bg-white card mx-auto position-relative\">\n        <div class=\"carrouselBoys-contentImgBoy mx-auto \"><img\n            class=\"gris-claro carrouselBoys-imgBoy w-100 h-100 preloaderImage-img\" data-img=\"" + photoURL + "\"\n            alt=\"\" /></div>\n        <div class=\"card-body text-center py-5 mt-4\">\n          <h5 class=\"card-title text-verde\">" + names + "</h5>\n          <p class=\"card-text\">" + carta + "</p>\n          <p  class=\"text-light carrouselBoys-buttonLink position-absolute p-2 m-0\" href=\"#\">" + id + "</p>\n        </div>\n      </div>\n    </div> \n  ";
+};
+
 var notificattion = function notificattion(selector, message, alert) {
 
   selector.innerHTML += "\n  <div id=\"notification-alert\" class=\"failedLogin alert alert-" + alert + " my-3\" role=\"alert\">\n    " + message + "\n  </div>\n  ";
@@ -34,7 +45,7 @@ var notificattion = function notificattion(selector, message, alert) {
 var verifyUser = function verifyUser() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user !== null) {
-      document.body.innerHTML = "\n        <div class=\"menuNavegation bg-white fixed-top shadow-sm\">\n          <nav class=\"navbar navbar-expand-lg navbar-light bg-white font-f-title\">\n            <div class=\"container\">\n              <a class=\"navbar-brand\" href=\"#inicio\">\n                <img class=\"menuNavegation-logo preloaderImage-img\" data-img=\"./img/Logo NAV.png\" alt=\"\"/>\n              </a>\n              <div class=\"ml-auto d-flex\">\n                <img class=\"sesion-avatar  mr-3\">\n                <a href=\"#\" class=\"d-flex justify-content-center align-items-center signOut nav-link p-0\"> salir</a>\n              </div>\n            </div>\n          </nav>\n        </div>\n        <header>\n          <div class=\"headerSesion py-5 container \">\n            <img src=\"./img/ICONO DE USUARIO SIN FOTO.png\" alt=\"\" class=\"headerSesion-avatarHeader m-auto d-block\">\n            <h1 class=\"py-3 text-center text-verde\">" + (user.displayName !== null ? user.displayName : "Bienvenido") + "</h1>\n            <div class=\"headerSesion-contentButtons m-auto  py-4\">\n              <div class=\"row\">\n                <div class=\"p-2  col-sm-12 col-md-6 \"><button class=\"m-auto btn btn-block btn-buttonForm br-25  a-title \" data-toggle=\"modal\" data-target=\"#staticBackdrop\">ni\xF1o</button></div>\n                <div class=\"p-2  col-sm-12 col-md-6 \"><button class=\"m-auto btn btn-block btn-azul br-25  a-title \">padrino</button></div> \n              </div>\n            </div>\n          </div>\n        </header>\n\n\n        <div class=\"modal fade\" id=\"staticBackdrop\" data-backdrop=\"static\" data-keyboard=\"false\" tabindex=\"-1\"\n        aria-labelledby=\"staticBackdropLabel\" aria-hidden=\"true\">\n        <div class=\"modal-dialog modal-dialog-centered\">\n          <div class=\"modal-content modal-notification\">\n            <form id=\"formInfoBoy\">\n              <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"staticBackdropLabel\">Modal title</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                  <span aria-hidden=\"true\">&times;</span>\n                </button>\n              </div>\n              <div class=\"modal-body px-4\">\n                <div class=\"row\">\n                  <div class=\"col-lg-4 col-md-12 p-2 \">\n                    <div class=\"modalNinio-contentImg  m-auto\">\n                      <img src=\"./img/ICONO DE USUARIO SIN FOTO.png\" alt=\"\" class=\"modalNinio-img m-auto mb-3 d-block\" id=\"imagenNinio\">\n                      <label for=\"addFoto\" class=\"mt-3 btn-azul btn btn-block br-25 p-1\">subir foto <img\n                          class=\"h-15px ml-2 \" src=\"./img/ICONO SUBIR FOTO.svg\" alt=\"\"></label>\n                      <input type=\"file\" name=\"fotoNinio\" id=\"addFoto\" class=\"d-none\">\n                    </div>\n                  </div>\n                  <div class=\"col-lg-8 col-md-12  p-2\">\n                    <div class=\"modalNinio-contentInputs m-auto\">\n                      <div class=\"form-group\">\n                        <input name=\"names\" class=\"form-control br-25\" type=\"text\" name=\"nombre\" placeholder=\"nombre y apellido\"\n                          required=\"required\" />\n                      </div>\n\n                      <div class=\"form-group\">\n                        <textarea class=\"form-control br-25\" name=\"textArea\" rows=\"5\" required placeholder=\"Ingreza tu carta Navide\xF1a\"></textarea>\n                      </div>\n                      <input type=\"hidden\" id=\"idNinio\" name=\"idNinio\">\n                    </div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"modal-footer\">\n                <button type=\"button\" class=\"p-2 px-4 br-25 btn btn-outline-secondary\"\n                  data-dismiss=\"modal\">Cancelar</button>\n                <input type=\"submit\" class=\"p-2 px-4  btn-azul br-25 btn btn-primary\" value=\"Ingrezar\">\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n      <div class=\"modal fade\" id=\"modalprogressBar\" style=\"display:none; background-color: rgba(0,0,0,.2);\">\n        <div class=\"modal-dialog modal-md\">\n          <div class=\"modal-content p-3\">\n\n          <div class=\"progress\">\n            <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"progressbar\"></div>\n          </div>\n        </div>\n      </div>\n      ";
+      document.body.innerHTML = "\n        <div class=\"menuNavegation bg-white fixed-top shadow-sm\">\n          <nav class=\"navbar navbar-expand-lg navbar-light bg-white font-f-title\">\n            <div class=\"container\">\n              <a class=\"navbar-brand\" href=\"#inicio\">\n                <img class=\"menuNavegation-logo preloaderImage-img\" data-img=\"./img/Logo NAV.png\" alt=\"\"/>\n              </a>\n              <div class=\"ml-auto d-flex\">\n                <img class=\"sesion-avatar  mr-3\">\n                <a href=\"#\" class=\"d-flex justify-content-center align-items-center signOut nav-link p-0\"> salir</a>\n              </div>\n            </div>\n          </nav>\n        </div>\n        <header>\n          <div class=\"headerSesion py-5 container \">\n            <img src=\"./img/ICONO DE USUARIO SIN FOTO.png\" alt=\"\" class=\"headerSesion-avatarHeader m-auto d-block\">\n            <h1 class=\"py-3 text-center text-verde\">" + (user.displayName !== null ? user.displayName : "Bienvenido") + "</h1>\n            <div class=\"headerSesion-contentButtons m-auto  py-4\">\n              <div class=\"row\">\n                <div class=\"p-2  col-sm-12 col-md-6 \"><button class=\"m-auto btn btn-block btn-buttonForm br-25  a-title \" data-toggle=\"modal\" data-target=\"#staticBackdrop\">ni\xF1o</button></div>\n                <div class=\"p-2  col-sm-12 col-md-6 \"><button id=\"buttonPadrino\" class=\"m-auto btn btn-block btn-azul br-25  a-title \" data-toggle=\"modal\" data-target=\"#modalPadrino\">padrino</button></div> \n              </div>\n            </div>\n          </div>\n        </header> \n\n\n        <div class=\"modal fade\" id=\"staticBackdrop\" data-backdrop=\"static\" data-keyboard=\"false\" tabindex=\"-1\"\n        aria-labelledby=\"staticBackdropLabel\" aria-hidden=\"true\">\n        <div class=\"modal-dialog modal-dialog-centered\">\n          <div class=\"modal-content modal-notification\">\n            <form id=\"formInfoBoy\">\n              <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"staticBackdropLabel\">Modal title</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                  <span aria-hidden=\"true\">&times;</span>\n                </button>\n              </div>\n              <div class=\"modal-body px-4\">\n           \n                <div class=\"row\">\n                  <div class=\"col-lg-4 col-md-12 p-2 \">\n                    <div class=\"modalNinio-contentImg  m-auto\">\n                      <img src=\"./img/ICONO DE USUARIO SIN FOTO.png\" alt=\"\" class=\"modalNinio-img m-auto mb-3 d-block\" id=\"imagenNinio\">\n                      <label for=\"addFoto\" class=\"mt-3 btn-azul btn btn-block br-25 p-1\">subir foto <img\n                          class=\"h-15px ml-2 \" src=\"./img/ICONO SUBIR FOTO.svg\" alt=\"\"></label>\n                      <input type=\"file\" name=\"fotoNinio\" id=\"addFoto\" class=\"d-none\">\n                    </div>\n                  </div>\n                  <div class=\"col-lg-8 col-md-12  p-2\">\n                    <div class=\"modalNinio-contentInputs m-auto\">\n                      <div class=\"form-group\">\n                        <input name=\"names\" class=\"form-control br-25\" type=\"text\" name=\"nombre\" placeholder=\"nombre y apellido\"\n                          required=\"required\" />\n                      </div>\n\n                      <div class=\"form-group\">\n                        <textarea class=\"form-control br-25\" name=\"textArea\" rows=\"5\" required placeholder=\"Ingreza tu carta Navide\xF1a\"></textarea>\n                      </div>\n                      <input type=\"hidden\" id=\"idNinio\" name=\"idNinio\">\n                    </div>\n                  </div>\n                </div>\n              </div>\n              <div class=\"modal-footer\">\n                <button type=\"button\" class=\"p-2 px-4 br-25 btn btn-outline-secondary\"\n                  data-dismiss=\"modal\">Cancelar</button>\n                <input type=\"submit\" class=\"p-2 px-4  btn-azul br-25 btn btn-primary\" value=\"Ingrezar\">\n              </div>\n            </form>\n          </div>\n        </div>\n      </div>\n\n\n    <div class=\"modal fade\" id=\"modalPadrino\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel2\" aria-hidden=\"true\">\n      <div class=\"modal-dialog modal-xl max-h100vh\">\n        <div class=\"modal-content bg-verde-muyClaro\">\n          <div class=\"modal-header\">\n            <h5 class=\"modal-title text-verde\"  id=\"exampleModalLabel\">Ni\xF1os a apadrinar</h5>\n            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">&times;</span>\n            </button>\n          </div>\n          <div class=\"modal-body overflow-auto max-h65vh\" >\n            <div class=\"row\" id=\"modalContent\">\n\n            </div>\n          </div>\n          <div class=\"modal-footer\">\n            <button type=\"button\" class=\"p-2 px-4 br-25 btn btn-outline-secondary\" data-dismiss=\"modal\">Cancelar</button>\n            <a class=\"btn btn-buttonForm br-25 p-2 px-4\" href=\"#\"><img\n              data-img=\"./img/whatsapp.svg\" class=\"preloaderImage-img mr-1\"> contactanos por whatsapp</a>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"modal fade\" id=\"modalprogressBar\" style=\"display:none; background-color: rgba(0,0,0,.2);\">\n      <div class=\"modal-dialog modal-md\">\n        <div class=\"modal-content p-3\">\n\n        <div class=\"progress\">\n          <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"progressbar\"></div>\n        </div>\n      </div>\n    </div>\n      ";
       document.body.classList.remove("loading");
       document.addEventListener("click", function (e) {
         if (e.target.matches(".signOut")) {
@@ -45,6 +56,9 @@ var verifyUser = function verifyUser() {
         }
       });
 
+      var db = firebase.database();
+      var niniosRef = db.ref().child("ni\xF1os-users");
+
       document.querySelector("#formInfoBoy").addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -52,8 +66,6 @@ var verifyUser = function verifyUser() {
         var idHidden = e.target.idNinio;
         var carta = e.target.textArea;
         var fotoNinio = e.target.fotoNinio;
-        var db = firebase.database();
-        var niniosRef = db.ref().child("ni\xF1os-users");
         var storage = firebase.storage();
         var bucket = storage.ref();
         var imgRef = bucket.child("img-ni\xF1os");
@@ -82,11 +94,11 @@ var verifyUser = function verifyUser() {
           } else {
             modalProgress.classList.remove("show");
             modalProgress.style.display = "none";
-            fotoNinio.innerHTML = "";
-            e.target.reset();
+            // fotoNinio.innerHTML = ``
             notificattion(e.target, "se ah registrado correctamente ", "success");
             document.querySelector("#imagenNinio").src = "./img/ICONO DE USUARIO SIN FOTO.png";
           }
+          counter === 100 ? e.target.reset() : false;
         }, function (err) {}, function () {
           var fileRef = imgRef.child(formdata.get("fotoNinio").name);
 
@@ -103,6 +115,16 @@ var verifyUser = function verifyUser() {
             niniosRef.update(updateData);
           });
         });
+      });
+      niniosRef.on("child_added", function (data) {
+        var modalContent = document.querySelector("#modalContent");
+
+        // document.querySelector(`#buttonPadrino`).addEventListener(`click`, e => {
+
+        modalContent.innerHTML += templateCardNinios(data.val());
+        preloaderImage(".preloaderImage-img");
+        c("s");
+        // })
       });
 
       document.querySelector("#addFoto").addEventListener("change", function (e) {

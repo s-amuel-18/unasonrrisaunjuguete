@@ -8744,6 +8744,12 @@ a.text-dark:hover {
   src: url("./typo/A little sunshine.ttf");
   font-style: normal; }
 
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+:root {
+  scroll-behavior: smooth; }
+
 html {
   box-sizing: border-box;
   font-family: "Roboto";
@@ -8777,6 +8783,9 @@ body {
 .text-verde {
   color: #85B501; }
 
+.text-azul {
+  color: #1C4D9A; }
+
 .h-15px {
   height: 15px; }
 
@@ -8786,6 +8795,23 @@ body {
 
 .btn-sesion {
   width: 120px; }
+
+.bg-verde-muyClaro {
+  background-color: #F7FFE1; }
+
+.h-90px {
+  max-height: 80px; }
+
+.max-w95 {
+  max-width: 95%; }
+
+.outline-0 {
+  outline: none; }
+  .outline-0:focus {
+    outline: none; }
+
+.azul-claro {
+  background-color: #E1ECFF; }
 
 .carrouselBoys-item {
   padding: 80px 0 0; }
@@ -8953,7 +8979,8 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    filter: brightness(0.5); }
 
 .btn-naranja {
   background-color: #d8791a;
@@ -9012,12 +9039,51 @@ body.loading {
   justify-content: center;
   align-items: center; }
 
+.inputCopy {
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #ffff; }
+  .inputCopy::-moz-selection {
+    background-color: transparent; }
+  .inputCopy::selection {
+    background-color: transparent; }
+
 .modalPadrino-imgNiño {
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%; }
-  @media screen and (max-width: 992px) {
-    .modalPadrino-imgNiño {
-      width: 100px;
-      height: 100px; } }
+
+.c-pointer {
+  cursor: pointer; }
+
+.gris-claro {
+  background-color: #f3f3f3; }
+
+.textGris-claro {
+  color: #f3f3f3; }
+
+.h50-w50 {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border: 3px solid #85B501; }
+
+.order-1 {
+  order: 1; }
+
+.btn-sesionIniciada {
+  font-size: 23px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  width: 100%; }
+
+.h-40px {
+  height: 40px; }
+
+.py-6 {
+  padding: 90px 0; }
+
+.w-fit {
+  width: fit-content; }

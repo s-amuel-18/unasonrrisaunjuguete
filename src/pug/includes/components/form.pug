@@ -1,10 +1,13 @@
 mixin formBoy(backgroundImg,img,googleSvg)
-  .formBoy.text-center.py-5#registro
+  .formBoy.text-center.py-6#registro
     img(data-img=backgroundImg, alt="").formBoy-nackgroundImg.preloaderImage-img
     .container
       .row
-        .col-12.px-3.py-4
-          h2.a-title.a-title-size.text-white.mb-5 regalo de santa
+        .col-12.px-3.py-4 
+          //- h2.a-title.a-title-size.text-white.mb-5 regalo de santa
+          
+          img(data-img=`./img/Regalo.png`, alt="").preloaderImage-img.h-90px.mb-3.max-w95
+
           .formBoy-contentForm.br-25.p-4.text-center.m-auto
             img(data-img=img, alt="").formBoy-img.m-auto.preloaderImage-img
             h3.h2.mb-4.text-verde Registrarse
@@ -19,4 +22,6 @@ mixin formBoy(backgroundImg,img,googleSvg)
               button(type="submit").btn.btn-buttonForm.btn-block.br-25 Registrar
               p.my-3 con:
               button(type="button").btn.btn-outline-primary.btn-block.br-25#googleAuth <img class="h-15px mr-2 preloaderImage-img" data-img="./img/google-icon.svg" alt=""> google
+              #notificationForm
+
 
